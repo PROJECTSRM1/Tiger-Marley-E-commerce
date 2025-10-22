@@ -1,4 +1,5 @@
-/* Offer Bar */
+/* Offer Bar
+
 .offer-bar {
   background-color: #AF3823;
   color: white;
@@ -12,19 +13,35 @@
 }
 .offer-bar:hover{
    background-color: #AF3823;
+} */
+
+
+.banner{
+font-family: 'poppins', sans-serif;
 }
 
-/* Offer Bar - stays same always */
-.offer-bar {
-  background-color: #AF3823;
+
+/* When scrolled, make background white and stick
+.banner.scrolled .navbar{
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* Text colors when scrolled */
+.navbar.scrolled .logo-icon,
+.navbar.scrolled .logo-highlight,
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .icon {
+  color: black;
+}
+
+/* Default (top of page) colors */
+.navbar .logo-icon,
+.navbar .logo-highlight,
+.navbar .nav-links a,
+.navbar .icon {
   color: white;
-  text-align: center;
-  font-size: 11px;
-  padding: 16px 0;
-  letter-spacing: 1px;
-  font-family: sans-serif;
-  font-weight: 500;
-  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 /* Navbar */
@@ -32,19 +49,19 @@
 .navbar {
   position: fixed;
   top: 0;
+  height:150px;
   width: 100%;
   z-index: 10;
   display: flex;
   flex-direction: column; /* stack logo and nav-links vertically */
   align-items: center;
   padding: 15px 0;
+    /* margin-top: 45px;  */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: transparent; /* default */
+  background-color:  transparent; /* default */
 }
-.navbar {
-  margin-top: 45px; /* adjust if needed */
-}
-.navbar .navbar-logo h1,
+
+
 .navbar .logo-icon,
 .navbar .logo-highlight,
 .navbar .nav-links a,
@@ -52,11 +69,65 @@
   color: white;
   transition: color 0.3s ease;
 }
-.navbar:hover,
-.navbar.scrolled {
+.navbar .navbar-logo h1{
+  padding-top: 20px;
+   color: white;
+  transition: color 0.3s ease;
+}
+.navbar:hover
+ {
     color: black;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* .navbar.fixed{
+  background-color: white;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  /* color: black;
+  /* padding-top: 45px; */
+  /* position:sticky;
+ margin-top:0;
+} */ 
+/* Navbar should always appear above offer bar */
+.navbar {
+  z-index: 20; /* higher value */
+} 
+
+
+.navbar.fixed {
+  position: fixed;
+
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease;
+}
+
+/* Animation for smooth slide-down */
+/* @keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  } */
+/* } */
+
+.hero-banner {
+  
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.navbar-logo:hover h1 {
+  color: #AF3823;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .navbar:hover .nav-links a {
@@ -71,28 +142,30 @@
   color: white !important;
 }
 .sale-link{
-  background-color: #AF3823;
+  background-color:#AF3823;
   padding-top:5px;
   padding-bottom: 5px;
-  padding-left:10px;
-  /* padding-right:20px; */
+  padding-left:15px;
+  /* margin-right:10px; */
   border-radius: 4px;
 }
-
-/* .navbar:hover .navbar-logo h1,
-.navbar.scrolled .navbar-logo h1 {
-
-} */
-.navbar:hover .logo-icon,
 .navbar.scrolled .logo-icon,
-.navbar:hover .logo-highlight,
-.navbar.scrolled .logo-highlight {
+.navbar.scrolled .logo-highlight
+{
+ color: #AF3823;
+}
+
+.navbar:hover .logo-icon,
+
+.navbar:hover .logo-highlight
+ {
   color: #AF3823;
 }
 
 /* Logo - centered */
 .navbar-logo {
   text-align: center;
+  /* padding-top: 20px; */
   margin-bottom: 10px; /* spacing between logo and links */
 }
 
@@ -109,6 +182,7 @@
   display: flex;
   justify-content: center;
   gap: 25px;
+  padding-top: 20px;
   position: relative; /* needed for the underline */
 }
 
@@ -214,21 +288,58 @@
   gap: 15px;
   font-size: 20px;
 }
+.icon {
+  color: white; /* Default color */
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: black; /* Change on hover */
+}
+/* Change nav-icons color on navbar hover or scroll */
+.navbar:hover .icon,
+.navbar.scrolled .icon {
+  color: black;
+}
+
+
+.icon,
+.icon:hover,
+.icon:visited,
+.icon:focus,
+.icon:active {
+  text-decoration: none;
+}
 
 /* Hero Banner */
 .hero-banner {
   /* background-image: url("../tiger.PNG"); */
   background-size: cover;
   background-position: center;
+  width:100%;
   height: 400px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.hero-banner.expanded {
+  height: 600px; /* you can adjust to 700px if you want larger */
+}
+.hero-banner {
+  transition:
+    background-image 1s ease-in-out,
+    height 0.6s ease-in-out;
+}
+
 
 .overlay {
   position: absolute;
+  
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
 }
@@ -240,4 +351,93 @@
   font-weight: 600;
   z-index: 2;
   letter-spacing: 2px;
+}
+/* SHOP NOW button (bottom left, appears only on logo click) */
+.shop-now-btn {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  padding: 14px 40px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-color: white;
+  /* border-radius: 30px; */
+  cursor: pointer;
+  letter-spacing: 1px;
+  overflow: hidden;
+  z-index: 3;
+
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Hover effect */
+.shop-now-btn:hover {
+  /* border: white; */color: black;
+  background-color:white;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.search-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  animation: fadeIn 0.3s ease;
+  margin-top: -20px;
+}
+
+
+.search-input {
+  width: 70%;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 50px;
+  outline: none;
+  background: white;
+}
+
+
+.search-input:focus {
+  border-color: #AF3823;
+}
+
+
+.close-search {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #333;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+
+.close-search:hover {
+  color: #AF3823;
+}
+/* Slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

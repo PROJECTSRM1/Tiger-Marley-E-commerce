@@ -1,0 +1,86 @@
+const festiveproducts = [
+  {
+    id: 1,
+    name: "MIDAS FLOWER",
+    price: 7500,
+    mrp:9000,
+    inStock: true,
+    image: "https://www.tigermarron.com/cdn/shop/files/00.jpg?v=1758789407&width=700",
+  },
+  {
+    id: 2,
+    name: "MIDAS FLOWER ",
+    price: 7125,
+    mrp:8000,
+    inStock: true,
+    image: "https://www.tigermarron.com/cdn/shop/files/11_4e97f065-3664-412b-9938-c8c5c854194c.jpg?v=1758789361&width=700",
+  },
+  {
+    id: 3,
+    name: "TIGRESS",
+    price: 5000,
+    mrp:8000,
+
+    inStock: true,
+    image: "https://www.tigermarron.com/cdn/shop/files/093A0025.jpg?v=1758794732&width=700",
+  },
+  {
+    id: 4,
+    name: "DUCHESS",
+    price: 6000,
+    mrp:8000,
+    inStock: true,
+    image: "https://www.tigermarron.com/cdn/shop/files/11_5d60281e-4553-43d5-975d-f4eef2f9ebec.jpg?v=1758789198&width=700",
+  },
+  {
+    id: 5,
+    name: "DUCHESS",
+    price: 5700,
+    mrp:8000,
+     inStock: true,
+    image: "https://www.tigermarron.com/cdn/shop/files/11_32977033-c9da-48f7-9895-0a899e558272.jpg?v=1758795186&width=700",
+  },
+  {
+    id: 6,
+    name: "EMPRESS",
+    price: 5700,
+    mrp:8000,
+     inStock: false,
+    image: "https://www.tigermarron.com/cdn/shop/files/1_5f502b75-81c5-4ab4-9ba3-cc7bb8b0e6ad.jpg?v=1758789131&width=700",
+  },
+  {
+    id: 7,
+    name: "CANTLE SKY",
+    price: 5250,
+    mrp:8000,
+     inStock: false,
+    image: "https://www.tigermarron.com/cdn/shop/files/11_43e8e701-4f20-4e2a-8058-47e76c579525.jpg?v=1758800478&width=700",
+  },
+  {
+    id: 8,
+    name: "EMPRESS",
+    price: 6000,
+    mrp:8000,
+    inStock: true,
+    image: "https://www.tigermarron.com/cdn/shop/files/093A0009.jpg?v=1758800860&width=700",
+  },
+  {
+    id: 9,
+    name: "POLKI",
+    price: 5700,
+    mrp:8000,
+  inStock: true,
+    image: "https://www.tigermarron.com/cdn/shop/files/093A0107.jpg?v=1758794708&width=700",
+  },
+  {
+    id: 10,
+    name: "MARIGOLD CHARM",
+    price: 1125,
+    mrp:8000,
+     inStock: false,
+    image: "https://www.tigermarron.com/cdn/shop/files/2_51cb488f-e2b9-4a2f-84ec-d5f526cef521.png?v=1758788675&width=700",
+  },
+  
+];
+
+export default festiveproducts;

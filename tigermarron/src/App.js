@@ -25,8 +25,17 @@ import BeltsPage from "./pages/BeltsPage";
 import CharmsPage from "./pages/CharmsPage";
 import LaptopSleevePage from "./pages/LaptopSleevePage";
 import KeychainsPage from "./pages/KeychainsPage";
+import Footer from "./components/Footer";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import RecoverPassword from "./components/RecoverPassword";
+import SearchPage from "./pages/SearchPage";
+import CartPage from "./pages/CartPage";
+import WishlistPage from "./pages/WishlistPage";  
+import ViewToggle from "./components/ViewToggle";
 
-
+import LandingPage from "./components/LandingPage";
+import "./App.css";
 
 
 
@@ -35,6 +44,7 @@ function App() {
     <Router>
       <Banner />
       <Routes>
+        {/* <ViewToggle/> */}
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/sale" element={<Sale />} />
@@ -54,14 +64,24 @@ function App() {
         <Route path="/accessories/wallets" element={<WalletsPage />} />
         <Route path="/accessories/cardholder" element={<CardHolderPage/>} />
         <Route path="/accessories/passportholder" element={<PassportHolderPage />} />
-        <Route path="/accessories/dairies" element={<DiariesPage />} />
+        <Route path="/accessories/diaries" element={<DiariesPage />} />
         <Route path="/accessories/belts" element={<BeltsPage />} />
         <Route path="/accessories/charms" element={<CharmsPage />} />
         <Route path="/accessories/laptopsleeve" element={<LaptopSleevePage />} />
         <Route path="/accessories/keychains" element={<KeychainsPage/>} />
         <Route path="/corporategifts" element={<CorporateGifts />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/recoverpassword" element={<RecoverPassword/>} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/landingpage" element={<LandingPage />} />
+        {/* <Route path="/search" element={<SearchPage />} /> */}
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
+    
       </Routes>
+       <Footer />
     </Router>
+    
   );
 }
 
