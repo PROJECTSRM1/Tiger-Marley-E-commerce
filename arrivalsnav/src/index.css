@@ -1,0 +1,17 @@
+/* index.css - base */
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+body {
+  margin: 0;
+  background: #faf9f6; /* warm off-white */
+  color: #222;
+  font-family: "Roboto", sans-serif;
+}
+
+/* serif for product names */
+.serif { font-family: "Cormorant Garamond", serif; }
+
+/* small utilities used below */
+.u-uppercase { text-transform: uppercase; letter-spacing: 1px; }
+.small-muted { color: #6b635b; font-size: 0.95rem; }
+.container-centered { max-width: 1400px; margin: 0 auto; }

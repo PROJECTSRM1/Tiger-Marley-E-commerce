@@ -1,0 +1,32 @@
+.sort-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+}
+
+.sort-bar span {
+  margin-right: 1rem;
+  color: #666;
+}
+
+.sort-dropdown {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.sort-dropdown:hover {
+  border-color: #999;
+}
+
+.sort-dropdown:focus {
+  outline: none;
+  border-color: #666;
+}

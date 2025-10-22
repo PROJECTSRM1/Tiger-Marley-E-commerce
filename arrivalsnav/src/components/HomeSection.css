@@ -1,0 +1,154 @@
+
+.home-layout {
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+background-color: #fff;
+min-height: 100vh;
+width: 100%;
+}
+
+
+/* Sidebar */
+.sidebar-section {
+width: 260px;
+padding: 40px 20px 0 40px;
+border-right: 1px solid #e0e0e0;
+background-color: #fff;
+flex-shrink: 0;
+position: sticky;
+top: 80px; 
+height: fit-content;
+align-self: flex-start;
+z-index: 10;
+}
+
+
+/* Main Section */
+.main-section {
+flex: 1;
+padding: 40px 50px;
+}
+
+
+/* Header Row (Sort bar on top) */
+
+
+.top-controls {
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #eaeaea;
+padding-bottom: 15px;
+margin-bottom: 35px;
+}
+
+
+.collection-title {
+font-size: 22px;
+letter-spacing: 1px;
+color: #111;
+font-weight: 600;
+}
+
+
+.sort-control {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+
+.sort-label {
+font-size: 13px;
+font-weight: 600;
+color: #333;
+}
+
+
+.sort-select {
+padding: 6px 10px;
+font-size: 13px;
+border: 1px solid #ccc;
+border-radius: 4px;
+background-color: #fff;
+outline: none;
+cursor: pointer;
+}
+
+
+/* Product Grid */
+.product-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 40px;
+}
+
+
+@media (max-width: 992px) {
+.product-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+
+.sidebar-section {
+display: none;
+}
+
+
+.main-section {
+padding: 20px;
+}
+}
+.sort-section {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-left: auto;
+font-weight: 600;
+font-size: 13px;
+color: #111;
+}
+
+
+.sort-section select {
+border: 1px solid #e5e5e5;
+padding: 6px 10px;
+font-size: 13px;
+cursor: pointer;
+background-color: #fff;
+text-transform: uppercase;
+}
+
+
+.product-grid.grid-view {
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* 2 products per row */
+gap: 20px;
+}
+
+
+.product-grid.compact-view {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+gap: 10px;
+}
+
+
+/* Optional styling for your header layout */
+.full-width-header-fixed {
+position: sticky;
+top: 0;
+background: #fff;
+z-index: 100;
+padding: 10px 20px;
+border-bottom: 1px solid #ddd;
+}
+
+
+.header-content-wrapper {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
