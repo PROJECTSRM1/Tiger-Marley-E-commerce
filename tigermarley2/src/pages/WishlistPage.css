@@ -1,0 +1,229 @@
+
+
+
+
+
+/* --- Layout --- */
+.app-container {
+  min-height: 100vh;
+   background-color: rgb(175, 56, 35);
+  padding: 1rem;
+  font-family: "Inter", sans-serif;
+}
+.main-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color:white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* --- Product Grid --- */
+.product-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Product Card --- */
+.product-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.product-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Product Details --- */
+.product-details {
+  padding: 0.75rem;
+}
+.product-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+.product-date {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* --- Image --- */
+.product-image-wrapper {
+  height: 10rem;
+  overflow: hidden;
+}
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* --- Price & Buttons --- */
+.product-price-section {
+  padding: 0.75rem;
+}
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #c93b2a;
+  margin-bottom: 0.75rem;
+}
+.actions-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.add-to-cart-btn {
+  flex-grow: 1;
+  background-color: #c93b2a;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.add-to-cart-btn:hover {
+  background-color: #b13324;
+}
+.delete-btn {
+  padding: 0.5rem;
+  border: 1px solid #c93b2a;
+  background: none;
+  color: #c93b2a;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background-color: #c93b2a;
+  color: white;
+}
+
+/* --- Empty Wishlist --- */
+.empty-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+}
+.empty-title {
+  font-size: 1.5rem;
+  color: #6b7280;
+}
+.empty-text {
+  color: #9ca3af;
+}
+
+/* --- Modal --- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+  border-top: 4px solid #c93b2a;
+}
+.modal-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.modal-title {
+  font-weight: 700;
+}
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #9ca3af;
+  cursor: pointer;
+}
+.modal-body {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #374151;
+}
+.modal-confirm-btn-flex {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.modal-cancel-btn,
+.modal-delete-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.modal-cancel-btn {
+  background-color: #f3f4f6;
+}
+.modal-delete-btn {
+  background-color: #c93b2a;
+  color: white;
+}
+.highlight {
+  font-weight: 600;
+  color: #c93b2a;
+}
+
+
+.notification-bar {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 500;
+}
+.notification-success {
+  background-color: #10b981;
+}
+.notification-info {
+  background-color: #3b82f6;
+}
+.notification-close {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}

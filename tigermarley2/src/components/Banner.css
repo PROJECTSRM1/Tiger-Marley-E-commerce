@@ -1,0 +1,332 @@
+/* Banner font */
+.banner {
+  font-family: 'Poppins', sans-serif;
+}
+/* .offer-bar {
+  position: sticky;
+  background-color: #AF3823;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  padding: 16px 0;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.offer-bar:hover {
+  background-color: #AF3823;
+}
+
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  background-color: white; /* always white */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: none; /* no hover animation */
+}
+
+/* Navbar logo */
+.navbar-logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.navbar-logo h1,
+.logo-icon,
+.logo-highlight {
+  color: #AF3823; /* static color */
+  transition: none;
+  font-size: 30px;
+}
+
+/* Nav links */
+.nav-links {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding-top: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black; /* static color */
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  transition: none; /* no hover animation */
+}
+
+
+/* Sale link styling */
+.nav-links a.sale-link {
+  background-color: #AF3823;
+  color: white !important;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* distance from link text */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #b57f50; /* gold-brown */
+  border-radius: 2px;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #b57f50;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 170px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  margin-top: 15px;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+  color: #b57f50;
+}
+
+/* Navbar icons */
+.nav-icons {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.nav-icons .icon {
+  color: black;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+  transition: none;
+}
+
+.nav-icons .icon:hover {
+  color: black; /* no hover change */
+}
+
+/* Hero banner */
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 1s ease-in-out, height 0.6s ease-in-out;
+}
+
+.hero-banner.expanded {
+  height: 600px;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Banner text */
+.banner-text {
+  position: relative;
+  color: white;
+  font-size: 42px;
+  font-weight: 600;
+  z-index: 2;
+  letter-spacing: 2px;
+}
+
+/* SHOP NOW button */
+.shop-now-btn {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  padding: 14px 40px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  z-index: 3;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.shop-now-btn:hover {
+  color: black;
+  background-color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.search-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  animation: fadeIn 0.3s ease;
+  margin-top: -20px;
+}
+
+
+.search-input {
+  width: 70%;
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 50px;
+  outline: none;
+  background: white;
+}
+
+
+.search-input:focus {
+  border-color: #AF3823;
+}
+
+
+.close-search {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #333;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+
+.close-search:hover {
+  color: #AF3823;
+}
+/* Slide-up animation */
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Search bar */
+.search-container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  margin-top: 130px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.search-container.fixed {
+  position: fixed;
+  top: 70px; /* below navbar */
+  left: 0;
+  z-index: 25;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.search-container .search-input {
+  width: 60%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 50px;
+  outline: none;
+}
+
+.search-container .close-search {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  margin-left: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.search-container .close-search:hover {
+  color: #AF3823;
+}

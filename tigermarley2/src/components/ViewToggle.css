@@ -1,0 +1,17 @@
+.view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+
+.view-toggle svg {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+.view-toggle svg:hover {
+  transform: scale(1.1);
+}

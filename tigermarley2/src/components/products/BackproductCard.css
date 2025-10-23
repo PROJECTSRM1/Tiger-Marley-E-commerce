@@ -1,0 +1,92 @@
+.product-card {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.image-container {
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Discount badge with black bg and white font */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* Out of stock overlay */
+.out-of-stock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  color: red;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.product-info p {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+  margin: 0;
+}
+
+/* Discounted price normal, bold, black */
+.discounted-price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
+/* MRP text style */
+.mrp-text {
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  user-select: none; /* so user can't select "MRP" text */
+}
+
+/* Original MRP price with strikethrough */
+.mrp-price {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 14px;
+}
