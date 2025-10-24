@@ -1,0 +1,97 @@
+.category-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none; 
+  color: inherit;
+  transition: transform 0.3s ease; 
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 120%;
+  height: 0;
+}
+
+.category-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.category-name {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin: 15px 0 10px 0;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.shop-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  margin-top: auto;
+  width: fit-content;
+  align-self: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+  transition: color 0.5s cubic-bezier(.785,.135,.15,.86), border-color 0.5s cubic-bezier(.785,.135,.15,.86);
+}
+
+.shop-button-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #a12222;
+  z-index: -1;
+  transition: width 0.4s cubic-bezier(.785,.135,.15,.86);
+}
+
+.shop-button-container > * {
+  z-index: 2;
+  transition: color 0.4s cubic-bezier(.785,.135,.15,.86);
+}
+
+.category-card:hover .shop-button-container {
+  color: #fff;
+  border-color: #000;
+}
+
+.category-card:hover .shop-button-container::before {
+  width: 100%;
+}
+
+.category-card:hover .shop-button-container .arrow {
+  color: #fff;
+}
+
+.arrow {
+  font-size: 18px;
+  line-height: 1;
+  transition: color 0.4s cubic-bezier(.785,.135,.15,.86);
+}

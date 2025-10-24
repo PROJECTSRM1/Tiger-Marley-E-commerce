@@ -1,0 +1,133 @@
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.filter-section {
+  margin-bottom: 45px;
+}
+
+.filter-section h4 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+/* Availability Checkbox */
+.availability-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.label-text {
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Simple switch visuals */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddd;
+  transition: .2s;
+  border-radius: 22px;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  top: 3px;
+  background-color: #777;
+  transition: .2s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #777;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Dual Thumb Slider */
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 15px;
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.range-input {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  background: none;
+  appearance: none;
+}
+
+.range-input::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #111;
+  cursor: pointer;
+  appearance: none;
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.price-inputs input {
+  width: 70px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.price-inputs span {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Sort Dropdown */
+select {
+  width: 100%;
+  padding: 7px 8px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

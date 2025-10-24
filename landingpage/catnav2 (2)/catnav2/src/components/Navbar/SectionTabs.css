@@ -1,0 +1,26 @@
+.section-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  color: #b65a48;
+  cursor: pointer;
+  padding-bottom: 8px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  border-bottom: 2px solid #b65a48;
+}
+
+.tab-btn:hover {
+  opacity: 0.8;
+}
