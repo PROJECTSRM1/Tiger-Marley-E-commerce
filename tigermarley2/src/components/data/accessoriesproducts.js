@@ -1,0 +1,103 @@
+const accessoriesproducts = [
+  {
+    id: 1,
+    name: "ARMOUR BELT",
+    price: 2625,
+    mrp: 4800,
+    discount: "SAVE 25%",
+    inStock: true,
+    image: "/images/ARMOURBELT.webp",
+  },
+  {
+    id: 2,
+    name: "BELOW THE BELT",
+    price: 2450,
+     mrp: 3300,
+    discount: "SAVE 25%",
+    inStock: true,
+    image: "/images/BELOWBELT.webp",
+  },
+  {
+    id: 3,
+    name: "BELOW THE BELT",
+    price: 3000,
+    inStock: false,
+    image: "/images/BELOWBELT2.webp",
+  },
+  {
+    id: 4,
+    name: "BELOW THE BELT",
+    price: 3500,
+    inStock: false,
+    image: "/images/BELOWTHEBELT.webp",
+  },
+  {
+    id: 5,
+    name: "CABALLO BELT",
+    price: 3500,
+    inStock: false,
+    image: "/images/CABALLOBELT.webp",
+  },
+  {
+    id: 6,
+    name: "IGNITION",
+    price: 1000,
+    inStock: false,
+    image: "/images/IGNITION.webp",
+  },
+  {
+    id: 7,
+    name: "PASO FINO AMBER CHAM",
+    price: 750,
+    mrp: 1000,
+    discount: "SAVE 25%",
+    inStock: true,
+    image: "/images/PASOFINO.webp",
+  },
+  {
+    id: 8,
+    name: "PASO FINO MOSS CHAM",
+    price: 750,
+    mrp: 1000,
+    discount: "SAVE 25%",
+    inStock: true,
+    image: "/images/PASOFINOMOSS.webp",
+  },
+  {
+    id: 9,
+    name: "TAKIN' NOTES",
+    price: 2450,
+    inStock: false,
+    image: "/images/TAKIN.webp",
+  },
+  {
+    id: 10,
+    name: "TAKIN' NOTES",
+    price: 2450,
+    inStock: false,
+    image: "/images/TMACC-090-1.webp",
+  },
+  {
+    id: 11,
+    name: "TAKIN' NOTES",
+    price: 2450,
+    inStock: false,
+    image: "/images/TMACC-091-1.webp",
+  },
+  {
+    id: 12,
+    name: "THE COWGIRL CLUB",
+    price: 3500,
+    inStock: false,
+    image:"/images/TMWBT-001-2.webp"
+  },
+  {
+    id: 13,
+    name: "HOUR GLASS",
+    price: 3500,
+    inStock: false,
+    image:"/images/TMWBT-002-1.webp"
+  },
+];
+
+export default accessoriesproducts;
